@@ -62,17 +62,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Database Control Free\Demos\C#\Scripts\DCF_DemoScene_ManagerScript_CSharp.cs" />
+    <Compile Include="Assets\Scripts\characterController.cs" />
+    <Compile Include="Assets\Scripts\clickHighlight.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\popUpClick.cs" />
+    <Compile Include="Assets\Scripts\popUpRotation.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ChangeColor.cs" />
-    <Compile Include="Assets\Unity Sample UI\Scripts\characterController.cs" />
-    <Compile Include="Assets\Unity Sample UI\Scripts\clickHighlight.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\DragMe.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\DragPanel.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\DropMe.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\PanelManager.cs" />
-    <Compile Include="Assets\Unity Sample UI\Scripts\popUpClick.cs" />
-    <Compile Include="Assets\Unity Sample UI\Scripts\popUpRotation.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ResizePanel.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ShowSliderValue.cs" />
