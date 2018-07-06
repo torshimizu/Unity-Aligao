@@ -19,7 +19,8 @@ public class popUpClick : MonoBehaviour {
     private void OnMouseDown() {
         
         // activate the canvas with the chamorro word text
-        canvasObj = this.gameObject.transform.GetChild(0).gameObject;
+        canvasObj = this.gameObject.transform.Find("PopUp").gameObject;
+        print(this.gameObject.transform.Find("PopUp"));
         bool isActive = canvasObj.activeSelf;
         canvasObj.SetActive(!isActive);
     }
