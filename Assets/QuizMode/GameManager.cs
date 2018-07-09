@@ -11,13 +11,21 @@ public class GameManager : MonoBehaviour {
     public Question[] questions;
     // this is a list of remaining questions
     private static List<Question> unansweredQuestions;
+    private static int scoreCount = 0;
+
+    public Transform propsHolder;
+    public AudioClip correctAudio;
+    public AudioClip incorrectAudio;
+    public AudioSource audioSource;
 
     private Question currentObject;
     private GameObject currentGameObject;
-    //private GameObject responseTextObject;
 
     [SerializeField]
     private Text responseText;
+
+    [SerializeField]
+    private Text scoreKeeper;
 
     [SerializeField]
     private Animator animator;
@@ -27,16 +35,19 @@ public class GameManager : MonoBehaviour {
 
 	private void Start()
 	{
-        if (unansweredQuestions == null || unansweredQuestions.Count == 0) {
+
+        if (unansweredQuestions == null) {
             unansweredQuestions = questions.ToList<Question>(); // turns the array into a list
         }
 
         SetCurrentQuestion();
 
         // finding the ACTIVE game object
-        currentGameObject = GameObject.Find(currentObject.objectName);
+        currentGameObject = propsHolder.Find(currentObject.objectName).gameObject;
+
         // activating the inactive child
-        currentGameObject.transform.Find(currentObject.objectName).gameObject.SetActive(true);
+        currentGameObject.SetActive(true);
+        scoreKeeper.text = scoreCount.ToString();
 	}
 
     void SetCurrentQuestion() 
@@ -64,10 +75,15 @@ public class GameManager : MonoBehaviour {
         if (userText == currentObject.answer) 
         {
             responseText.text = "CORRECT!";
+            scoreCount += 1;
+            audioSource.clip = correctAudio;
+            audioSource.Play();
         }
         else 
         {
             responseText.text = "wrong - " + currentObject.answer;
+            audioSource.clip = incorrectAudio;
+            audioSource.Play();
         }
 
         animator.SetTrigger("responseGiven");

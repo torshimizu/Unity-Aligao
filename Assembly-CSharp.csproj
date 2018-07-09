@@ -196,7 +196,7 @@
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\popUpClick.cs" />
     <Compile Include="Assets\Scripts\popUpRotation.cs" />
-    <Compile Include="Assets\Scripts\rotateObject.cs" />
+    <Compile Include="Assets\Scripts\rotateChildren.cs" />
     <Compile Include="Assets\Scripts\StoryElement.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity Sample UI\Scripts\ApplicationManager.cs" />
