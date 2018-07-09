@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BeachScene.unity
     guid: b8a004524925241058e01a2c498cf685
+  - enabled: 1
+    path: Assets/QuizMode/QuizMode.unity
+    guid: 642559328338649f693024e2b6bf20aa
   m_configObjects: {}

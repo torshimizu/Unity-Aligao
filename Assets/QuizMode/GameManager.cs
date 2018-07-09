@@ -14,9 +14,16 @@ public class GameManager : MonoBehaviour {
 
     private Question currentObject;
     private GameObject currentGameObject;
+    //private GameObject responseTextObject;
 
     [SerializeField]
-    private float timeBetweenQuestions = 1f;
+    private Text responseText;
+
+    [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
+    private float timeBetweenQuestions = 3f;
 
 	private void Start()
 	{
@@ -36,8 +43,6 @@ public class GameManager : MonoBehaviour {
     {
         int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentObject = unansweredQuestions[randomQuestionIndex];
-
-
     }
 
     IEnumerator TransitionToNextQuestion() 
@@ -48,7 +53,7 @@ public class GameManager : MonoBehaviour {
         // not sure what this does - something about pausing for a bit then doing more
         yield return new WaitForSeconds(timeBetweenQuestions);
 
-        // load this same scene
+        // load this same scene 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
@@ -56,14 +61,16 @@ public class GameManager : MonoBehaviour {
     public void UserAnswerCorrect(GameObject textObject) 
     {
         string userText = textObject.GetComponentInChildren<Text>().text;
-        if (userText == currentObject.answer) {
-            print("CORRECT");
+        if (userText == currentObject.answer) 
+        {
+            responseText.text = "CORRECT!";
         }
         else 
         {
-            print("wronggggg");
+            responseText.text = "wrong - " + currentObject.answer;
         }
 
+        animator.SetTrigger("responseGiven");
         StartCoroutine(TransitionToNextQuestion());
     }
 }

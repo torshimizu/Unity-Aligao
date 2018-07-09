@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{89E4698F-C154-3938-BBD0-083165710B5A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StoryElement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/QuizMode/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/LoadSceneOnClick.cs" Line="12" Column="2" />
-      <File FileName="Assets/Scripts/popUpClick.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/Dialogue.cs" Line="9" Column="1" />
-      <File FileName="Assets/Scripts/DialogueManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/StoryElement.cs" Line="1" Column="1" />
+      <File FileName="Assets/QuizMode/GameManager.cs" Line="26" Column="43" />
+      <File FileName="Assets/QuizMode/Question.cs" Line="5" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
