@@ -40,6 +40,11 @@ public class QuizManager : MonoBehaviour {
     [SerializeField]
     private float timeBetweenQuestions = 3f;
 
+    //private void Awake()
+    //{
+    //    unansweredQuestions = questions.ToList<Question>(); // turns the array into a list
+    //}
+
 	private void Start()
 	{
 
@@ -55,7 +60,16 @@ public class QuizManager : MonoBehaviour {
         // activating the inactive child
         currentGameObject.SetActive(true);
         scoreKeeper.text = scoreCount.ToString() + "/" + questions.Length;
+
 	}
+
+    private void Update()
+    {
+        if (unansweredQuestions.Count == 0)
+        {
+            animator.SetTrigger("QuizEnd");
+        }
+    }
 
     void SetCurrentQuestion() 
     {
@@ -78,6 +92,7 @@ public class QuizManager : MonoBehaviour {
         yield return new WaitForSeconds(timeBetweenQuestions);
 
         // load this same scene 
+        SetCurrentQuestion();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
