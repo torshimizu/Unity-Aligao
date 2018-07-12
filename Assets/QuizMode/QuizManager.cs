@@ -54,10 +54,10 @@ public class QuizManager : MonoBehaviour {
 
         SetCurrentQuestion();
 
-        // finding the ACTIVE game object
+        // finding the inactive item
         currentGameObject = propsHolder.Find(currentObject.objectName).gameObject;
 
-        // activating the inactive child
+        // activating the item
         currentGameObject.SetActive(true);
         scoreKeeper.text = scoreCount.ToString() + "/" + questions.Length;
 
