@@ -191,10 +191,12 @@
     <Compile Include="Assets\QuizMode\QuizManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
+    <Compile Include="Assets\Scripts\EventTest.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\characterController.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\clickHighlight.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\LoadSceneOnClick.cs" />
-    <Compile Include="Assets\Scripts\ExploreMode\popUpClick.cs" />
+    <Compile Include="Assets\Scripts\ExploreMode\PopUpClick.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\popUpRotation.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\rotateChildren.cs" />
     <Compile Include="Assets\Scripts\GameControl.cs" />
