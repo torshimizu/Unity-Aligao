@@ -39,5 +39,6 @@ public class GameControl : MonoBehaviour {
 
         // print the last item added to the list
         Debug.Log(seenExploreItems[seenExploreItems.Count - 1]);
+        Debug.Log(seenExploreItems.Count);
     }
 }

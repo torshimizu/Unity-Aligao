@@ -14,9 +14,9 @@ public class AddItemOnClick : MonoBehaviour {
         EventManager.StopListening("popUp", AddItemToSeenList);
     }
 
-    void AddItemToSeenList(string message)
+    void AddItemToSeenList(string itemName)
     {
-        Debug.Log("Another Test Fuction was called with message: " + message);
-        GameControl.AddExploreItemsToList(message);
+        Debug.Log("Another Test Fuction was called with message: " + itemName);
+        GameControl.AddExploreItemsToList(itemName);
     }
 }
