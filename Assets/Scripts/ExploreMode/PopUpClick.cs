@@ -3,14 +3,6 @@ using System.Collections;
 
 public class PopUpClick : MonoBehaviour {
 
-    void Update()
-    {
-        if (Input.GetKeyDown("q"))
-        {
-            EventManager.TriggerEvent("test");
-        }
-    }
-
     void OnMouseDown()
     {
         
@@ -18,7 +10,7 @@ public class PopUpClick : MonoBehaviour {
         bool isActive = canvasObj.activeSelf;
         canvasObj.SetActive(!isActive);
 
-        EventManager.TriggerEvent("test2");
+        EventManager.TriggerEvent("popUp", gameObject.name);
     }
 
 }
