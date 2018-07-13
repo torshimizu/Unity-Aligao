@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Main Menu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: e7d0fbed4bf1f475eb690c26c609ab63
   - enabled: 0
     path: Assets/Unity Sample UI/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/BeachScene.unity
+    path: Assets/Scenes/BeachScene.unity
     guid: b8a004524925241058e01a2c498cf685
   - enabled: 1
-    path: Assets/QuizMode/QuizMode.unity
+    path: Assets/Scenes/QuizMode.unity
     guid: 642559328338649f693024e2b6bf20aa
   m_configObjects: {}

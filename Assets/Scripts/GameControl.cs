@@ -8,7 +8,7 @@ using System.IO;
 public class GameControl : MonoBehaviour {
 
     public static GameControl control;
-    private static List<string> seenExploreItems;
+    public static List<string> seenExploreItems;
 
 	private void Awake()
 	{

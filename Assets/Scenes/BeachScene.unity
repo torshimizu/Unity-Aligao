@@ -1377,7 +1377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
       propertyPath: m_Name
-      value: Coconut_Tree2
+      value: Coconut_Tree02
       objectReference: {fileID: 0}
     - target: {fileID: 481554, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
       propertyPath: m_LocalScale.x
@@ -1741,6 +1741,7 @@ GameObject:
   - component: {fileID: 575626738}
   - component: {fileID: 575626737}
   - component: {fileID: 575626736}
+  - component: {fileID: 575626744}
   m_Layer: 5
   m_Name: Button Layer
   m_TagString: MaterialButtonLayer
@@ -1885,12 +1886,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 575626744}
+        m_MethodName: LoadByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1931,6 +1932,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575626734}
+--- !u!114 &575626744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575626734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3639df2a6fdf04e1886abb58bab44ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &577986210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2025,7 @@ GameObject:
   - component: {fileID: 608861808}
   - component: {fileID: 608861807}
   m_Layer: 0
-  m_Name: Latte_Stone5
+  m_Name: Latte_Stone05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2184,7 +2196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
       propertyPath: m_Name
-      value: Coconut_Tree3
+      value: Coconut_Tree03
       objectReference: {fileID: 0}
     - target: {fileID: 481554, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
       propertyPath: m_LocalScale.x
@@ -2912,7 +2924,7 @@ GameObject:
   - component: {fileID: 844418899}
   - component: {fileID: 844418900}
   m_Layer: 0
-  m_Name: Latte_Stone2
+  m_Name: Latte_Stone02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3497,7 +3509,7 @@ GameObject:
   - component: {fileID: 1159349836}
   - component: {fileID: 1159349837}
   m_Layer: 0
-  m_Name: Latte_Stone1
+  m_Name: Latte_Stone01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4248,6 +4260,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1514611127}
+  - component: {fileID: 1514611128}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4269,6 +4282,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514611128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514611126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757d8c30d3ff34ebfaad9a8229e586bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1534919107
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,7 +4380,7 @@ GameObject:
   - component: {fileID: 1541634111}
   - component: {fileID: 1541634110}
   m_Layer: 0
-  m_Name: Latte_Stone6
+  m_Name: Latte_Stone06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4840,7 +4864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
       propertyPath: m_Name
-      value: Coconut_Tree1
+      value: Coconut_Tree01
       objectReference: {fileID: 0}
     - target: {fileID: 481554, guid: c6b7fb383a3534b039692b5485b6e739, type: 2}
       propertyPath: m_LocalScale.x
@@ -5038,7 +5062,7 @@ GameObject:
   - component: {fileID: 1916165023}
   - component: {fileID: 1916165024}
   m_Layer: 0
-  m_Name: Latte_Stone3
+  m_Name: Latte_Stone03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5140,7 +5164,7 @@ GameObject:
   - component: {fileID: 1962737443}
   - component: {fileID: 1962737442}
   m_Layer: 0
-  m_Name: Latte_Stone4
+  m_Name: Latte_Stone04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

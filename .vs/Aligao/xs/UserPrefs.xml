@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{89E4698F-C154-3938-BBD0-083165710B5A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AddItemOnClick.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ExploreMode/PopUpClick.cs">
     <Files>
-      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="14" Column="6" />
-      <File FileName="Assets/Scripts/EventManager.cs" Line="80" Column="6" />
-      <File FileName="Assets/Scripts/AddItemOnClick.cs" Line="19" Column="56" />
-      <File FileName="Assets/Scripts/GameControl.cs" Line="33" Column="29" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameControl.cs" Line="11" Column="11" />
+      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="12" Column="29" />
+      <File FileName="Assets/QuizMode/QuizManager.cs" Line="145" Column="2" NotebookId="1" />
+      <File FileName="Assets/QuizMode/Question.cs" Line="6" Column="24" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

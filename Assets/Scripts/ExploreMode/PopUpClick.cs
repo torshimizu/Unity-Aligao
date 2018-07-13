@@ -9,6 +9,7 @@ public class PopUpClick : MonoBehaviour {
 
         // this takes all but the last 2 characters of the object name
         string itemName = gameObject.name.Substring(0, gameObject.name.Length - 2);
+        Debug.Log(itemName);
 
         EventManager.TriggerEvent("popUp", itemName);
     }

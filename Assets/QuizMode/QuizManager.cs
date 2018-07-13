@@ -12,6 +12,7 @@ public class QuizManager : MonoBehaviour {
     // this is a list of remaining questions
     private static List<Question> unansweredQuestions;
     private static int scoreCount = 0;
+    private static int foundItemCount = GameControl.seenExploreItems.Count;
 
     // the current question
     private Question currentObject;
@@ -40,16 +41,13 @@ public class QuizManager : MonoBehaviour {
     [SerializeField]
     private float timeBetweenQuestions = 3f;
 
-    //private void Awake()
-    //{
-    //    unansweredQuestions = questions.ToList<Question>(); // turns the array into a list
-    //}
 
 	private void Start()
 	{
 
         if (unansweredQuestions == null) {
-            unansweredQuestions = questions.ToList<Question>(); // turns the array into a list
+            //unansweredQuestions = questions.ToList<Question>(); // turns the array into a list
+            SetUnansweredQuestions();
         }
 
         SetCurrentQuestion();
@@ -59,17 +57,10 @@ public class QuizManager : MonoBehaviour {
 
         // activating the item
         currentGameObject.SetActive(true);
-        scoreKeeper.text = scoreCount.ToString() + "/" + questions.Length;
+        scoreKeeper.text = scoreCount.ToString() + "/" + foundItemCount;
 
 	}
 
-    private void Update()
-    {
-        if (unansweredQuestions.Count == 0)
-        {
-            animator.SetTrigger("QuizEnd");
-        }
-    }
 
     void SetCurrentQuestion() 
     {
@@ -88,12 +79,19 @@ public class QuizManager : MonoBehaviour {
         // remove from the list
         unansweredQuestions.Remove(currentObject);
 
-        // not sure what this does - something about pausing for a bit then doing more
-        yield return new WaitForSeconds(timeBetweenQuestions);
+        if(unansweredQuestions.Count == 0)
+        {
+            animator.SetTrigger("QuizEnd");
+        }
+        else
+        {
+            // not sure what this does - something about pausing for a bit then doing more
+            yield return new WaitForSeconds(timeBetweenQuestions);
 
-        // load this same scene 
-        SetCurrentQuestion();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // load this same scene 
+            SetCurrentQuestion();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
     }
 
@@ -121,7 +119,6 @@ public class QuizManager : MonoBehaviour {
 
     }
 
-
     public void MenuButtonClick()
     {
         // reset the scene
@@ -131,4 +128,22 @@ public class QuizManager : MonoBehaviour {
         // load the menu
         SceneManager.LoadScene(0);
     }
+
+    private void SetUnansweredQuestions()
+    {
+        List<string> exploreItems = GameControl.seenExploreItems;
+        unansweredQuestions = new List<Question>();
+
+        foreach(Question q in questions)
+        {
+            Debug.Log(q.objectName);
+            if(exploreItems.Contains(q.objectName))
+            {
+                Debug.Log(q.objectName);
+                unansweredQuestions.Add(q);
+            }
+        }
+
+    }
+
 }
