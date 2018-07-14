@@ -11,7 +11,7 @@ public class GameControl : MonoBehaviour {
     public static List<string> seenExploreItems;
 
 	private void Awake()
-	{
+    {
         if (control == null) 
         {
             DontDestroyOnLoad(this.gameObject);
@@ -21,11 +21,12 @@ public class GameControl : MonoBehaviour {
         {
             Destroy(this.gameObject);    
         }
+
 	}
 
     public static void AddExploreItemsToList(string itemName)
     {
-        // create a new list if one does not already exist
+         //create a new list if one does not already exist
         if(seenExploreItems == null)
         {
             seenExploreItems = new List<string>();

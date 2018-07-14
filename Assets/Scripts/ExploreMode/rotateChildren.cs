@@ -12,6 +12,9 @@ public class rotateChildren : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //transform.Rotate(0, 30 * Time.deltaTime, 0);
-        GameObject.FindWithTag("prop").transform.Rotate(0, 30 * Time.deltaTime, 0);
+        if (GameObject.FindWithTag("prop"))
+        {
+            GameObject.FindWithTag("prop").transform.Rotate(0, 30 * Time.deltaTime, 0);
+        }
 	}
 }
