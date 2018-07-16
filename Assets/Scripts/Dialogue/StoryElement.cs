@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class StoryElement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Dialogue dialogue;
+
+    public void TriggerDialogue()
+    {
+        //Debug.Log("I am a story element");
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    }
+
+
 }

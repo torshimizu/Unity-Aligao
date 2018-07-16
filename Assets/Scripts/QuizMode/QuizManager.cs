@@ -103,6 +103,10 @@ public class QuizManager : MonoBehaviour {
         {
             gameOver = true;
             animator.SetTrigger("QuizEnd");
+
+
+            // reset everything somehow so that they can play the quiz again...?
+            unansweredQuestions = null;
         }
         else
         {
@@ -152,27 +156,18 @@ public class QuizManager : MonoBehaviour {
     private void SetUnansweredQuestions()
     {
 
-        //if(GameControl.seenExploreItems == null)
-        //{
-        //    gameOver = true;
-        //    animator.SetBool("NoWords", true);
-        //}
-        //else
-        //{
-            List<string> exploreItems = GameControl.seenExploreItems;
-            foundItemCount = exploreItems.Count;
-            unansweredQuestions = new List<Question>();
+        List<string> exploreItems = GameControl.seenExploreItems;
+        foundItemCount = exploreItems.Count;
+        unansweredQuestions = new List<Question>();
 
-            foreach (Question q in questions)
+        foreach (Question q in questions)
+        {
+            if (exploreItems.Contains(q.objectName))
             {
-                if (exploreItems.Contains(q.objectName))
-                {
-                    Debug.Log(q.objectName);
-                    unansweredQuestions.Add(q);
-                }
+                Debug.Log(q.objectName);
+                unansweredQuestions.Add(q);
             }
-  
-        //}
+        }
 
     }
 

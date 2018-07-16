@@ -4,11 +4,16 @@ using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour {
 
     public static GameControl control;
     public static List<string> seenExploreItems;
+
+    public Dialogue dialogue;
+
+
 
 	private void Awake()
     {
@@ -23,6 +28,25 @@ public class GameControl : MonoBehaviour {
         }
 
 	}
+
+    //public void LoadByIndex(int sceneIndex)
+    //{
+    //    if(sceneIndex == 1 && initialExploreVisit)
+    //    {
+    //        SceneManager.LoadScene(sceneIndex);
+
+    //        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+    //        initialExploreVisit = false;
+    //    }
+    //    else
+    //    {
+    //        SceneManager.LoadScene(sceneIndex);
+    //    }
+
+
+    //}
+
 
     public static void AddExploreItemsToList(string itemName)
     {
