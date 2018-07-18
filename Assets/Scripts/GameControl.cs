@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -10,9 +11,11 @@ public class GameControl : MonoBehaviour {
 
     public static GameControl control;
     public static List<string> seenExploreItems;
+    public Text exploreItemsText;
 
     public Dialogue dialogue;
 
+    private static string filePath;
 
 
 	private void Awake()
@@ -27,25 +30,45 @@ public class GameControl : MonoBehaviour {
             Destroy(this.gameObject);    
         }
 
+        filePath = Application.persistentDataPath + "/playerInfo.dat";
 	}
 
-    //public void LoadByIndex(int sceneIndex)
-    //{
-    //    if(sceneIndex == 1 && initialExploreVisit)
-    //    {
-    //        SceneManager.LoadScene(sceneIndex);
+    // load seen items
+    void OnEnable()
+    {
+        if(File.Exists(filePath))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(filePath, FileMode.Open);
 
-    //        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            PlayerData data = (PlayerData)bf.Deserialize(file); // casts the data to the PlayerData class
+            file.Close();
 
-    //        initialExploreVisit = false;
-    //    }
-    //    else
-    //    {
-    //        SceneManager.LoadScene(sceneIndex);
-    //    }
+            seenExploreItems = data.seenItems;
 
+            string debugMessage = seenExploreItems != null ? "successfully loaded" : "error with loading";
+            Debug.Log(debugMessage);
+        }
+    }
 
-    //}
+    void Update()
+    {
+        if(seenExploreItems != null)
+        {
+            exploreItemsText.text = "";
+
+            foreach(var itemName in seenExploreItems)
+            {
+                exploreItemsText.text += itemName;
+                exploreItemsText.text += "\n";
+            }
+        }
+        else
+        {
+            exploreItemsText.text = "No items found yet";
+        }
+    }
+
 
 
     public static void AddExploreItemsToList(string itemName)
@@ -59,11 +82,44 @@ public class GameControl : MonoBehaviour {
         // only add the item if it hasn't already been found
         if(!seenExploreItems.Contains(itemName))
         {
+
             seenExploreItems.Add(itemName);
+            Save();
+
         }
 
         // print the last item added to the list
         Debug.Log(seenExploreItems[seenExploreItems.Count - 1]);
         Debug.Log(seenExploreItems.Count);
     }
+
+    private static void Save()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file;
+
+        file = File.Exists(filePath) ? File.Open(filePath, FileMode.Open) : File.Create(filePath);
+
+        PlayerData data = new PlayerData();
+        data.seenItems = seenExploreItems;
+
+        try
+        {
+            bf.Serialize(file, data);
+            Debug.Log("successfully saved");
+        }
+        catch
+        {
+            Debug.Log("Unable to save");
+        }
+
+        file.Close();
+
+    }
+}
+
+[Serializable]
+class PlayerData
+{
+    public List<string> seenItems;
 }
