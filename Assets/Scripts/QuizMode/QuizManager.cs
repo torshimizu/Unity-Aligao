@@ -8,7 +8,9 @@ using System.Linq;
 public class QuizManager : MonoBehaviour {
 
     // this will be all questions
-    public Question[] questions;
+    //public Question[] questions;
+    private List<Question> questions;
+
     // this is a list of remaining questions
     private static List<Question> unansweredQuestions;
     private static int scoreCount = 0;
@@ -41,6 +43,17 @@ public class QuizManager : MonoBehaviour {
 
     [SerializeField]
     private float timeBetweenQuestions = 3f;
+
+    void Awake()
+    {
+        if(questions == null)
+        {
+            questions = new List<Question>();
+            ConvertToQuestion();
+            Debug.Log($"{questions.Count} questions added");
+        }
+
+    }
 
 
 	private void Start()
@@ -170,5 +183,43 @@ public class QuizManager : MonoBehaviour {
         }
 
     }
+
+    void ConvertToQuestion()
+    {
+        foreach(var set in propsInfo)
+        {
+            Question newQuestion = new Question();
+
+            temp.objectName = set[0];
+            temp.answer = set[1];
+            temp.hint = set[2];
+            temp.alternateAnswer = set[3];
+
+            questions.Add(newQuestion);
+        }
+    }
+
+    string[,] propsInfo = new string[,]
+    {
+        { "Coconut_Tree", "tronkon niyok", "coconut = niyok", "" },
+        { "Banana_Tree", "tronkon chotda", "banana = chotda", "" },
+        { "Latte_Stone", "latte'", "none", "" },
+        { "Cutting_Board", "famikayan", "none", "" },
+        { "Exterior_lamp", "kåndet", "similar to candle", "kinke\'" },
+        { "Folding_Table", "lamasa", "none", "" },
+        { "Folding_Chair", "siya", "none", "" },
+        { "Apple", "mansana", "none", "" },
+        { "Banana", "aga", "none", "" },
+        { "Bicycle", "bisikleta", "none", "" },
+        { "Slippers", "yore", "none", "chankletas"},
+        { "Kitchen_knife", "se\'se\'", "repeating characters", "" },
+        { "Travel_mug", "båsu", "none", "" },
+        { "Mug", "båsu", "none", "" },
+        { "Sink", "labadot", "none", "" },
+        { "Doormat", "guafak", "none", "" },
+        { "Ocean", "napu", "none", "" },
+        
+    };
+
 
 }

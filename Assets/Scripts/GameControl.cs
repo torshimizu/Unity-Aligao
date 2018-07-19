@@ -53,7 +53,7 @@ public class GameControl : MonoBehaviour {
 
     void Update()
     {
-        if(seenExploreItems != null)
+        if(seenExploreItems != null && exploreItemsText != null)
         {
             exploreItemsText.text = "";
 
@@ -63,7 +63,7 @@ public class GameControl : MonoBehaviour {
                 exploreItemsText.text += "\n";
             }
         }
-        else
+        else if(seenExploreItems == null && exploreItemsText != null) // no items but seen explore items Text exists, seenExploreItems does not exist
         {
             exploreItemsText.text = "No items found yet";
         }
