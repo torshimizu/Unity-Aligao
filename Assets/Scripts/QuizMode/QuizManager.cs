@@ -50,7 +50,7 @@ public class QuizManager : MonoBehaviour {
         {
             questions = new List<Question>();
             ConvertToQuestion();
-            Debug.Log($"{questions.Count} questions added");
+            Debug.Log(questions.Count.ToString() + " questions added");
         }
 
     }
@@ -120,6 +120,7 @@ public class QuizManager : MonoBehaviour {
 
             // reset everything somehow so that they can play the quiz again...?
             unansweredQuestions = null;
+            scoreCount = 0;
         }
         else
         {
@@ -186,14 +187,14 @@ public class QuizManager : MonoBehaviour {
 
     void ConvertToQuestion()
     {
-        foreach(var set in propsInfo)
+        for (int i = 0; i < propsInfo.GetLength(0); i += 1)
         {
             Question newQuestion = new Question();
 
-            temp.objectName = set[0];
-            temp.answer = set[1];
-            temp.hint = set[2];
-            temp.alternateAnswer = set[3];
+            newQuestion.objectName = propsInfo[i, 0];
+            newQuestion.answer = propsInfo[i, 1];
+            newQuestion.hint = propsInfo[i, 2];
+            newQuestion.alternateAnswer = propsInfo[i, 3];
 
             questions.Add(newQuestion);
         }
