@@ -53,11 +53,6 @@ public class QuizManager : MonoBehaviour {
             Debug.Log(questions.Count.ToString() + " questions added");
         }
 
-        foreach(var question in questions)
-        {
-            Debug.Log(question.objectName);
-        }
-
     }
 
 	private void Start()
