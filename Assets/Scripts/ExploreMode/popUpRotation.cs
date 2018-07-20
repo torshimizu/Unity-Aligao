@@ -12,6 +12,6 @@ public class popUpRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.rotation = player.rotation;
+        this.transform.rotation = -player.rotation;
 	}
 }

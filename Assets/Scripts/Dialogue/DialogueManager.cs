@@ -11,18 +11,17 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator animator;
 
-    private static bool initialExploreVisit = true;
+    //private static bool initialExploreVisit;
     private Queue<string> sentences;
 
     // Use this for initialization
     void Start()
     {
-        if (initialExploreVisit)
+        if (ExploreManager.initialExploreVisit)
         {
             sentences = new Queue<string>();
             animator.SetTrigger("StartInstruction");
             StartDialogue(dialogue);
-            initialExploreVisit = false;
         }
      
     }
