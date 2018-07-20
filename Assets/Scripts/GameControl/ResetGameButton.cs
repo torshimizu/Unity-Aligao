@@ -9,7 +9,9 @@ public class ResetGameButton : MonoBehaviour {
 
     void Start()
     {
-        if(GameControl.seenExploreItems != null && GameControl.seenExploreItems.Count > 0)
+
+        //if(GameControl.seenExploreItems != null && GameControl.seenExploreItems.Count > 0)
+        if(!GameControl.initialExploreVisit)
         {
             resetGameButton.SetActive(true);
         }

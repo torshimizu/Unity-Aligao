@@ -17,11 +17,12 @@ public class DialogueManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        if (ExploreManager.initialExploreVisit)
+        if (GameControl.initialExploreVisit)
         {
             sentences = new Queue<string>();
             animator.SetTrigger("StartInstruction");
             StartDialogue(dialogue);
+            GameControl.ToggleInitialExploreVisit();
         }
      
     }

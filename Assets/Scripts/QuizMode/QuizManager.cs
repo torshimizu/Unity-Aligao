@@ -61,7 +61,7 @@ public class QuizManager : MonoBehaviour {
         // game over = true
         // start animation for no words
         // don't set unanswered questions
-        if (GameControl.seenExploreItems == null)
+        if (GameControl.seenExploreItems.Count == 0)
         {
             gameOver = true;
             animator.SetBool("NoWords", true);
