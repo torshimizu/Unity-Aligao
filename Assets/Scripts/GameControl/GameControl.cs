@@ -102,6 +102,7 @@ public class GameControl : MonoBehaviour {
     public static void ResetExplore()
     {
         // should trigger an "are you sure?"
+        Debug.Log("Reset explore called in Game Control");
         initialExploreVisit = true;
         GameControl.seenExploreItems.Clear();
         SceneManager.LoadScene(1);

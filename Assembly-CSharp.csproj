@@ -200,6 +200,7 @@
     <Compile Include="Assets\Scripts\GameControl\EventManager.cs" />
     <Compile Include="Assets\Scripts\GameControl\GameControl.cs" />
     <Compile Include="Assets\Scripts\GameControl\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\GameControl\ResetGame.cs" />
     <Compile Include="Assets\Scripts\GameControl\ResetGameButton.cs" />
     <Compile Include="Assets\Scripts\QuizMode\MenuButtonClick.cs" />
     <Compile Include="Assets\Scripts\QuizMode\Question.cs" />
