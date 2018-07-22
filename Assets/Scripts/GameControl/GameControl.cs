@@ -11,6 +11,7 @@ public class GameControl : MonoBehaviour {
     
     public static GameControl control;
     public static List<string> seenExploreItems;
+    public static List<string> exploreTranslations;
 
     public static bool initialExploreVisit = true;
     private static string filePath;
@@ -34,6 +35,7 @@ public class GameControl : MonoBehaviour {
             Debug.Log("successfully cleared file");
             initialExploreVisit = true;
             seenExploreItems = null;
+            exploreTranslations = null;
         }
 
     }
@@ -55,6 +57,7 @@ public class GameControl : MonoBehaviour {
         if (seenExploreItems == null)
         {
             seenExploreItems = new List<string>();
+            exploreTranslations = new List<string>();
         }
 
 
@@ -78,9 +81,12 @@ public class GameControl : MonoBehaviour {
             file.Close();
 
             seenExploreItems = data.seenItems;
+            exploreTranslations = data.translations;
 
             string debugMessage = seenExploreItems != null ? "successfully loaded" : "error with loading";
             Debug.Log(debugMessage);
+            Debug.Log(seenExploreItems.Count.ToString() + " items found");
+            Debug.Log(exploreTranslations.Count.ToString() + " translations");
         }
     }
 
@@ -91,9 +97,10 @@ public class GameControl : MonoBehaviour {
 
 
 
-    public static void UpdateExploreItems(string itemName)
+    public static void UpdateExploreItems(string itemName, string translation)
     {
         seenExploreItems.Add(itemName);
+        exploreTranslations.Add(translation);
         Save();
         Debug.Log(itemName + " added to GameControl list");
         Debug.Log(seenExploreItems.Count.ToString() + " items in the list");
@@ -105,6 +112,7 @@ public class GameControl : MonoBehaviour {
         Debug.Log("Reset explore called in Game Control");
         initialExploreVisit = true;
         GameControl.seenExploreItems.Clear();
+        GameControl.exploreTranslations.Clear();
         SceneManager.LoadScene(1);
     }
 
@@ -117,6 +125,7 @@ public class GameControl : MonoBehaviour {
 
         PlayerData data = new PlayerData();
         data.seenItems = seenExploreItems;
+        data.translations = exploreTranslations;
 
         try
         {
@@ -138,4 +147,5 @@ public class GameControl : MonoBehaviour {
 class PlayerData
 {
     public List<string> seenItems;
+    public List<string> translations;
 }

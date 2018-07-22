@@ -14,9 +14,10 @@ public class AddItemOnClick : MonoBehaviour {
         EventManager.StopListening("popUp", AddItemToSeenList);
     }
 
-    void AddItemToSeenList(string itemName)
+    void AddItemToSeenList(string itemName, string translation)
     {
         Debug.Log("Another Test Fuction was called with message: " + itemName);
-        ExploreManager.AddExploreItemsToList(itemName);
+        Debug.Log("Translation sent with it " + translation);
+        ExploreManager.AddExploreItemsToList(itemName, translation);
     }
 }

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class UnityEventOne : UnityEvent<string>
+public class UnityEventOne : UnityEvent<string, string>
 {
 }
 
@@ -45,7 +45,7 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public static void StartListening(string eventName, UnityAction<string> listener)
+    public static void StartListening(string eventName, UnityAction<string, string> listener)
     {
         UnityEventOne thisEvent = null;
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
@@ -60,7 +60,7 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public static void StopListening(string eventName, UnityAction<string> listener)
+    public static void StopListening(string eventName, UnityAction<string, string> listener)
     {
         if (eventManager == null) return;
         UnityEventOne thisEvent = null;
@@ -70,12 +70,12 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public static void TriggerEvent(string eventName, string itemName)
+    public static void TriggerEvent(string eventName, string itemName, string translationWord)
     {
         UnityEventOne thisEvent = null;
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
-            thisEvent.Invoke(itemName);
+            thisEvent.Invoke(itemName, translationWord);
         }
     }
 }
