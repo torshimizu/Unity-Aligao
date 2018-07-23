@@ -6,6 +6,7 @@ public class PopUpClick : MonoBehaviour {
 
     void OnMouseDown()
     {
+        Debug.Log(gameObject.name + " was clicked");
         ActivatePopUpCanvas();
 
         if(this.GetComponentInChildren<Text>() != null){ // this still finds inactive game object

@@ -7,11 +7,16 @@ public class popUpRotation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.rotation = player.rotation;
-	}
+
+        Vector3 v = Camera.main.transform.position - transform.position;
+        v.x = v.z = 0.0f;
+        transform.LookAt(Camera.main.transform.position - v);
+        transform.Rotate(0, 180, 0);
+        //transform.LookAt(Camera.main.transform);
+    }
 }
