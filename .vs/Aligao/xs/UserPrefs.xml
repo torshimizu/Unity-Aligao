@@ -5,10 +5,10 @@
       <File FileName="Assets/Standard Assets/Vehicles/Aircraft/AircraftGuidelines.txt" Line="1" Column="1" />
       <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="164" Column="36" />
       <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="16" Column="66" />
       <File FileName="Assets/Scripts/ExploreMode/ExploreManager.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/Scripts/PlaneControl.cs" Line="47" Column="39" NotebookId="1" />
-      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="37" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="27" Column="53" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
