@@ -17,6 +17,11 @@ public class ExploreManager : MonoBehaviour {
         // to GameControl.exploreTranslations position in memory
         exploreTranslations = GameControl.exploreTranslations;
 
+        if (GameControl.GetPrizeStatus())
+        {
+            Debug.Log("The prize has been won");
+        }
+
 	}
 
     void Update () {

@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{89E4698F-C154-3938-BBD0-083165710B5A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ExploreMode/TerrainClick.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameControl/GameControl.cs">
     <Files>
-      <File FileName="Assets/Standard Assets/Vehicles/Aircraft/AircraftGuidelines.txt" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="164" Column="36" />
-      <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="131" Column="60" />
       <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="16" Column="66" />
-      <File FileName="Assets/Scripts/ExploreMode/ExploreManager.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/PlaneControl.cs" Line="47" Column="39" NotebookId="1" />
-      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="27" Column="53" NotebookId="1" />
+      <File FileName="Assets/Scripts/ExploreMode/ExploreManager.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/PlaneControl.cs" Line="47" Column="39" />
+      <File FileName="Assets/Scripts/ExploreMode/AddItemOnClick.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="43" Column="10" />
+      <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="45" Column="40" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

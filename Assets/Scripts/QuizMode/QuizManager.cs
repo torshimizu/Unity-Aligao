@@ -39,6 +39,12 @@ public class QuizManager : MonoBehaviour {
     private Text hintText;
 
     [SerializeField]
+    private Text endGameText;
+
+    [SerializeField]
+    private GameObject prizeCanvas;
+
+    [SerializeField]
     private Animator animator;
 
     [SerializeField]
@@ -113,9 +119,22 @@ public class QuizManager : MonoBehaviour {
         // once you get to the end of unanswered questions
         if(unansweredQuestions.Count == 0)
         {
+
+            if(scoreCount == propsInfo.GetLength(0))
+            {
+                endGameText.text = "Congratulations!";
+                prizeCanvas.SetActive(true);
+                GameControl.ToggleIsPrizeUnlocked();
+            }
+            else
+            {
+                endGameText.text = "Chagi ta'lu (try again)! Look for more items in Explore Mode to win a prize";
+                prizeCanvas.SetActive(false);
+            }
+
+            Debug.Log(GameControl.GetPrizeStatus());
             gameOver = true;
             animator.SetTrigger("QuizEnd");
-
 
             // reset everything somehow so that they can play the quiz again...?
             unansweredQuestions = null;
@@ -188,18 +207,19 @@ public class QuizManager : MonoBehaviour {
     {
         for (int i = 0; i < propsInfo.GetLength(0); i += 1)
         {
-            Question newQuestion = new Question();
-
-            newQuestion.objectName = propsInfo[i, 0];
-            newQuestion.answer = propsInfo[i, 1];
-            newQuestion.hint = propsInfo[i, 2];
-            newQuestion.alternateAnswer = propsInfo[i, 3];
+            Question newQuestion = new Question
+            {
+                objectName = propsInfo[i, 0],
+                answer = propsInfo[i, 1],
+                hint = propsInfo[i, 2],
+                alternateAnswer = propsInfo[i, 3]
+            };
 
             questions.Add(newQuestion);
         }
     }
 
-    string[,] propsInfo = new string[,]
+    internal readonly string[,] propsInfo = new string[,]
     {
         { "Coconut_Tree", "tronkon niyok", "coconut = niyok", "" },
         { "Banana_Tree", "tronkon chotda", "banana = chotda", "" },
@@ -218,6 +238,7 @@ public class QuizManager : MonoBehaviour {
         { "Sink", "labadot", "none", "" },
         { "Doormat", "guafak", "none", "" },
         { "Ocean", "napu", "none", "" },
+        { "Sand", "inai", "none", "" }
         
     };
 

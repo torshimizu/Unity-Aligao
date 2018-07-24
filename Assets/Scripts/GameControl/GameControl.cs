@@ -15,13 +15,14 @@ public class GameControl : MonoBehaviour {
 
     public static bool initialExploreVisit = true;
     private static string filePath;
+    private static bool isPrizeUnlocked;
 
 
     public Dialogue dialogue;
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 50, 50), "Clear File"))
+        if (GUI.Button(new Rect((Screen.width - 120), 10, 100, 50), "Clear File"))
         {
             try
             {
@@ -36,6 +37,12 @@ public class GameControl : MonoBehaviour {
             initialExploreVisit = true;
             seenExploreItems = null;
             exploreTranslations = null;
+        }
+
+        if (GUI.Button(new Rect((Screen.width - 120), 70, 100, 50), "Set prize status"))
+        {
+            isPrizeUnlocked = !isPrizeUnlocked;
+            Debug.Log(isPrizeUnlocked);
         }
 
     }
@@ -60,6 +67,8 @@ public class GameControl : MonoBehaviour {
             exploreTranslations = new List<string>();
         }
 
+        if (isPrizeUnlocked == null)
+            isPrizeUnlocked = false;
 
         filePath = Application.persistentDataPath + "/playerInfo.dat";
 
@@ -82,6 +91,8 @@ public class GameControl : MonoBehaviour {
 
             seenExploreItems = data.seenItems;
             exploreTranslations = data.translations;
+            isPrizeUnlocked = data.prizeStatus;
+
 
             string debugMessage = seenExploreItems != null ? "successfully loaded" : "error with loading";
             Debug.Log(debugMessage);
@@ -95,8 +106,6 @@ public class GameControl : MonoBehaviour {
         initialExploreVisit = false;
     }
 
-
-
     public static void UpdateExploreItems(string itemName, string translation)
     {
         seenExploreItems.Add(itemName);
@@ -104,6 +113,16 @@ public class GameControl : MonoBehaviour {
         Save();
         Debug.Log(itemName + " added to GameControl list");
         Debug.Log(seenExploreItems.Count.ToString() + " items in the list");
+    }
+
+    public static void ToggleIsPrizeUnlocked()
+    {
+        isPrizeUnlocked = true;
+    }
+
+    public static bool GetPrizeStatus()
+    {
+        return initialExploreVisit;
     }
 
     public static void ResetExplore()
@@ -126,6 +145,7 @@ public class GameControl : MonoBehaviour {
         PlayerData data = new PlayerData();
         data.seenItems = seenExploreItems;
         data.translations = exploreTranslations;
+        data.prizeStatus = isPrizeUnlocked;
 
         try
         {
@@ -148,4 +168,5 @@ class PlayerData
 {
     public List<string> seenItems;
     public List<string> translations;
+    public bool prizeStatus;
 }
