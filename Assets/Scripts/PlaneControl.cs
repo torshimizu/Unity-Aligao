@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlaneControl : MonoBehaviour {
 
+    [SerializeField]
+    private Camera camera;
+
     float speed = 90.0f;
 	
 	// Update is called once per frame
@@ -22,16 +25,16 @@ public class PlaneControl : MonoBehaviour {
         if (speed < 35.0f)
             speed = 35.0f;
         
-        transform.Rotate(Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
+        transform.Rotate(-Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
 
-        // should figure out a rigidbody for this
-        //float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
+         //should figure out a rigidbody for this
+        float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight(transform.position);
 
-        // ensuring that you can't hit the ground
-        //if(terrainHeightWhereWeAre > transform.position.y)
-            //transform.position = new Vector3(transform.position.x,
-                                             //terrainHeightWhereWeAre,
-                                             //transform.position.z);
+         //ensuring that you can't hit the ground
+        if(terrainHeightWhereWeAre > transform.position.y)
+            transform.position = new Vector3(transform.position.x,
+                                             terrainHeightWhereWeAre,
+                                             transform.position.z);
 
 	}
 
@@ -43,9 +46,9 @@ public class PlaneControl : MonoBehaviour {
 
         float bias = 0.96f;
 
-        Camera.main.transform.position = Camera.main.transform.position * bias +
+        camera.transform.position = camera.transform.position * bias +
             moveCamTo * (1.0f - bias);
         
-        Camera.main.transform.LookAt(transform.position + transform.forward * 30.0f);
+        camera.transform.LookAt(transform.position + transform.forward * 30.0f);
     }
 }

@@ -8,6 +8,15 @@ using System.Linq;
 
 public class ExploreManager : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject playerObj;
+
+    [SerializeField]
+    private GameObject planeObj;
+
+    [SerializeField]
+    private Camera planeCamera;
+
     public static List<string> exploreTranslations;
     public Text exploreItemsText;
 
@@ -17,14 +26,21 @@ public class ExploreManager : MonoBehaviour {
         // to GameControl.exploreTranslations position in memory
         exploreTranslations = GameControl.exploreTranslations;
 
+	}
+
+	private void OnEnable()
+	{
         if (GameControl.GetPrizeStatus())
         {
             Debug.Log("The prize has been won");
-        }
+            playerObj.SetActive(false);
 
+            planeCamera.gameObject.SetActive(true);
+            planeObj.SetActive(true);
+        }
 	}
 
-    void Update () {
+	void Update () {
         // this probably should not happen once per frame
         // should only happen if AddExploreItems was called.
         if (exploreTranslations.Count == 0) // no items but seen explore items Text exists, seenExploreItems does not exist

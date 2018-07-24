@@ -15,7 +15,7 @@ public class GameControl : MonoBehaviour {
 
     public static bool initialExploreVisit = true;
     private static string filePath;
-    private static bool isPrizeUnlocked;
+    public static bool isPrizeUnlocked = false;
 
 
     public Dialogue dialogue;
@@ -66,9 +66,6 @@ public class GameControl : MonoBehaviour {
             seenExploreItems = new List<string>();
             exploreTranslations = new List<string>();
         }
-
-        if (isPrizeUnlocked == null)
-            isPrizeUnlocked = false;
 
         filePath = Application.persistentDataPath + "/playerInfo.dat";
 
@@ -122,7 +119,7 @@ public class GameControl : MonoBehaviour {
 
     public static bool GetPrizeStatus()
     {
-        return initialExploreVisit;
+        return isPrizeUnlocked;
     }
 
     public static void ResetExplore()
