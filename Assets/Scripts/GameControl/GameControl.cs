@@ -93,7 +93,10 @@ public class GameControl : MonoBehaviour {
 
             string debugMessage = seenExploreItems != null ? "successfully loaded" : "error with loading";
             Debug.Log(debugMessage);
-            Debug.Log(seenExploreItems.Count.ToString() + " items found");
+            for (int i = 0; i < seenExploreItems.Count; i++)
+            {
+                Debug.Log(seenExploreItems[i]);
+            }
             Debug.Log(exploreTranslations.Count.ToString() + " translations");
         }
     }

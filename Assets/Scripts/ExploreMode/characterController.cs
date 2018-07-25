@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class characterController : MonoBehaviour {
 
-    public float moveSpeed = 80f;
-    public float turnSpeed = 80f;
+    public float moveSpeed = 50f;
+    public float turnSpeed = 60f;
 
 	
 	void Update () {

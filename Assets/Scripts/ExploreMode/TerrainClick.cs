@@ -18,24 +18,27 @@ public class TerrainClick : MonoBehaviour
             int oceanLayer = 1 << 4;
             int terrainLayer = 1 << 9;
 
+
             if (Physics.Raycast(Camera.main.ScreenPointToRay(mousePosition), out hit, 100, oceanLayer))
             {
+
+                Debug.Log("hit the ocean");
                 bool isActive = oceanPopUp.activeSelf;
                 oceanPopUp.SetActive(!isActive);
                 if (!isActive)
                 {
                     Vector3 canvasPosition = new Vector3(hit.point.x, hit.point.y + 10.0f, hit.point.z);
                     oceanPopUp.transform.position = canvasPosition;
-                    EventManager.TriggerEvent("popUp", "Ocean", "Tasi (ocean)");
 
                 }
             }
 
             else if (Physics.Raycast(Camera.main.ScreenPointToRay(mousePosition), out hit, 100, terrainLayer))
             {
-                bool isActive = terrainPopUp.activeSelf;
-                terrainPopUp.SetActive(!isActive);
-                if (!isActive)
+                Debug.Log("hit sand");
+                bool terrainPopUpIsActive = terrainPopUp.activeSelf;
+                terrainPopUp.SetActive(!terrainPopUpIsActive);
+                if (!terrainPopUpIsActive)
                 {
 
                     Vector3 canvasPosition = new Vector3(hit.point.x, hit.point.y + 10.0f, hit.point.z);
@@ -45,6 +48,7 @@ public class TerrainClick : MonoBehaviour
                 }
 
             }
+
         }
     }
 }

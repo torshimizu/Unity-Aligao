@@ -237,7 +237,7 @@ public class QuizManager : MonoBehaviour {
         { "Mug", "båsu", "none", "" },
         { "Sink", "labadot", "none", "" },
         { "Doormat", "guafak", "none", "" },
-        { "Ocean", "napu", "none", "" },
+        { "Ocean", "tasi", "none", "" },
         { "Sand", "inai", "none", "" }
         
     };
