@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{89E4698F-C154-3938-BBD0-083165710B5A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs">
     <Files>
       <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="246" Column="2" />
       <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="16" Column="66" />
@@ -9,8 +9,8 @@
       <File FileName="Assets/Scripts/ExploreMode/AddItemOnClick.cs" Line="24" Column="1" />
       <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="18" Column="35" />
       <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="100" Column="1" NotebookId="1" />
-      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs" Line="45" Column="5" NotebookId="1" />
-      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaCharacter.cs" Line="5" Column="11" NotebookId="1" />
+      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs" Line="84" Column="12" NotebookId="1" />
+      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaCharacter.cs" Line="13" Column="3" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
