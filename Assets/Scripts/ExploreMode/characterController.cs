@@ -7,12 +7,7 @@ public class characterController : MonoBehaviour {
     public float moveSpeed = 80f;
     public float turnSpeed = 80f;
 
-	// Use this for initialization
-	void Start () {
-
-    }
 	
-	// Update is called once per frame
 	void Update () {
         if (Input.GetKey(KeyCode.W)){
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -40,4 +35,5 @@ public class characterController : MonoBehaviour {
         }
 
 	}
+
 }
