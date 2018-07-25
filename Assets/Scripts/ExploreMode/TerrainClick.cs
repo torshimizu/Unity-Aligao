@@ -29,6 +29,7 @@ public class TerrainClick : MonoBehaviour
                 {
                     Vector3 canvasPosition = new Vector3(hit.point.x, hit.point.y + 10.0f, hit.point.z);
                     oceanPopUp.transform.position = canvasPosition;
+                    EventManager.TriggerEvent("popUp", "Ocean", "Tasi (ocean)");
 
                 }
             }

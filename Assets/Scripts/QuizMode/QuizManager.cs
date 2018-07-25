@@ -235,7 +235,6 @@ public class QuizManager : MonoBehaviour {
         { "Bicycle", "bisikleta", "none", "" },
         { "Slippers", "yore", "none", "chankletas"},
         { "Kitchen_knife", "se\'se\'", "repeating characters", "" },
-        { "Travel_mug", "båsu", "none", "" },
         { "Mug", "båsu", "none", "" },
         { "Sink", "labadot", "none", "" },
         { "Doormat", "guafak", "none", "" },
@@ -243,8 +242,9 @@ public class QuizManager : MonoBehaviour {
         { "hibiskus", "rosa", "flower", "guma\' mela" },
         { "rock", "acho\'", "none", "" },
         { "Pan", "kålåhi", "none", "" },
-        { "Iguana", "hilitai", "none", "" }
-        
+        { "Iguana", "hilitai", "none", "" },
+        { "Woven_Basket", "kanastra", "none", ""},
+        { "Grill", "tunu", "none", "" }
     };
 
 
