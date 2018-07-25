@@ -4,43 +4,6 @@ using System.Collections.Generic;
 
 
 public class IguanaUserController : MonoBehaviour {
-	//IguanaCharacter iguanaCharacter;
-	
-	//void Start () {
-	//	iguanaCharacter = GetComponent < IguanaCharacter> ();
-	//}
-	
-	//void Update () {	
-	//	if (Input.GetButtonDown ("Fire1")) {
-	//		iguanaCharacter.Attack();
-	//	}
-		
-	//	if (Input.GetKeyDown (KeyCode.H)) {
-	//		iguanaCharacter.Hit();
-	//	}
-		
-	//	if (Input.GetKeyDown (KeyCode.E)) {
-	//		iguanaCharacter.Eat();
-	//	}
-
-	//	if (Input.GetKeyDown (KeyCode.K)) {
-	//		iguanaCharacter.Death();
-	//	}
-		
-	//	if (Input.GetKeyDown (KeyCode.R)) {
-	//		iguanaCharacter.Rebirth();
-	//	}		
-
-
-
-	//}
-	
-	//private void FixedUpdate()
-	//{
-	//	float h = Input.GetAxis ("Horizontal");
-	//	//float v = Input.GetAxis ("Vertical");
-	//	iguanaCharacter.Move (v,h);
-	//}
 
     public Animator iguanaAnimator;
 
@@ -67,7 +30,10 @@ public class IguanaUserController : MonoBehaviour {
         // Calculate the journey length.
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
 
+        // Start the animation.
         iguanaAnimator.SetFloat("Forward", 0.5f);
+
+        // set the direction of the movement.
         start = startMarker;
         destination = endMarker;
 
@@ -82,9 +48,7 @@ public class IguanaUserController : MonoBehaviour {
 
         // Fraction of journey completed = current distance divided by total distance.
         float fracJourney = distCovered / journeyLength;
-
-        Debug.Log(fracJourney);
-
+         
         transform.position = Vector3.Lerp(start.position, destination.position, fracJourney);
 
 

@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: ed8ddc4df48204dd6a5193c22746f6b4
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Glass
+    100004: Lantern
+    100006: Light_bulb_holder
+    100008: LightBulb_bottom
+    100010: LightBulb_glass
+    100012: LightBulb_inside
+    100014: LightBulb_inside_2
+    100016: LightBulb_inside_3
+    100018: LightBulb_screw
+    100020: Screws
+    400000: //RootNode
+    400002: Glass
+    400004: Lantern
+    400006: Light_bulb_holder
+    400008: LightBulb_bottom
+    400010: LightBulb_glass
+    400012: LightBulb_inside
+    400014: LightBulb_inside_2
+    400016: LightBulb_inside_3
+    400018: LightBulb_screw
+    400020: Screws
+    2100000: Material.006
+    2100002: Material.004
+    2100004: No Name
+    2100006: Material.003
+    2100008: Material.005
+    2100010: Material
+    2100012: Material.001
+    2100014: Material.002
+    2100016: Lantern_M
+    2300000: Glass
+    2300002: Lantern
+    2300004: Light_bulb_holder
+    2300006: LightBulb_bottom
+    2300008: LightBulb_glass
+    2300010: LightBulb_inside
+    2300012: LightBulb_inside_2
+    2300014: LightBulb_inside_3
+    2300016: LightBulb_screw
+    2300018: Screws
+    3300000: Glass
+    3300002: Lantern
+    3300004: Light_bulb_holder
+    3300006: LightBulb_bottom
+    3300008: LightBulb_glass
+    3300010: LightBulb_inside
+    3300012: LightBulb_inside_2
+    3300014: LightBulb_inside_3
+    3300016: LightBulb_screw
+    3300018: Screws
+    4300000: Light_bulb_holder
+    4300002: LightBulb_inside_3
+    4300004: LightBulb_bottom
+    4300006: LightBulb_inside_2
+    4300008: LightBulb_inside
+    4300010: LightBulb_screw
+    4300012: LightBulb_glass
+    4300014: Screws
+    4300016: Glass
+    4300018: Lantern
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lantern_M
+    second: {fileID: 2100000, guid: 6869d9b0b1d134f18adc7f066443ad8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 6138fa4a4063e48a29d792495e2f484e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 3c375f50a8727414493e7d2f8784b027, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: bfecd158e13a5454a88bb67ec6413fd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 05431f7b9101e44b2aa191bba787e112, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 67fb9f881550d440796df28d995f01a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 48f68c375d93d4ca3b487168cfddda67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: bffe27536532c438391fe3e52ec95d40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 8556efe6f9d964a70975a3881f5d9065, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
