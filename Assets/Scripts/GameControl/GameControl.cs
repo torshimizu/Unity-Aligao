@@ -15,7 +15,8 @@ public class GameControl : MonoBehaviour {
 
     public static bool initialExploreVisit = true;
     private static string filePath;
-    public static bool isPrizeUnlocked = false;
+    private static bool isPrizeUnlocked = false;
+    private static bool flightMode = false;
 
 
     public Dialogue dialogue;
@@ -118,11 +119,31 @@ public class GameControl : MonoBehaviour {
     public static void ToggleIsPrizeUnlocked()
     {
         isPrizeUnlocked = true;
+        Save();
     }
 
     public static bool GetPrizeStatus()
     {
         return isPrizeUnlocked;
+    }
+
+    public static bool InFlightMode()
+    {
+        return flightMode;
+    }
+
+    // this is used by DialogueManager to activate flight mode
+    // after the dialogue has been played
+    public static void StartPlaneSimulator()
+    {
+        ExploreManager.ActivatePlaneSimulator();
+    }
+
+    public static void FlightModeMenuClick()
+    {
+        flightMode = true;
+        // Load Explore mode with flight activated
+        SceneManager.LoadScene(1);
     }
 
     public static void ResetExplore()

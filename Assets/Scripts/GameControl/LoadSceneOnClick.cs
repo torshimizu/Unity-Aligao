@@ -9,4 +9,11 @@ public class LoadSceneOnClick : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+
+
+    public void FlightModeLoad()
+    {
+        GameControl.FlightModeMenuClick();
+    }
 }

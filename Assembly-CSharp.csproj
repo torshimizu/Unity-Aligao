@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FlightMode.cs" />
     <Compile Include="Assets\ImportedAssets\JSLizards\Iguana\Scripts\IguanaCameraScript.cs" />
     <Compile Include="Assets\ImportedAssets\JSLizards\Iguana\Scripts\IguanaCharacter.cs" />
     <Compile Include="Assets\ImportedAssets\JSLizards\Iguana\Scripts\IguanaUserController.cs" />
@@ -193,15 +194,16 @@
     <Compile Include="Assets\Scripts\ExploreMode\characterController.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\clickHighlight.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\ExploreManager.cs" />
+    <Compile Include="Assets\Scripts\ExploreMode\LaptopClick.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\PopUpClick.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\popUpRotation.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\rotateChildren.cs" />
     <Compile Include="Assets\Scripts\ExploreMode\TerrainClick.cs" />
     <Compile Include="Assets\Scripts\GameControl\EventManager.cs" />
+    <Compile Include="Assets\Scripts\GameControl\FlightModeButton.cs" />
     <Compile Include="Assets\Scripts\GameControl\GameControl.cs" />
     <Compile Include="Assets\Scripts\GameControl\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\GameControl\ResetGame.cs" />
-    <Compile Include="Assets\Scripts\GameControl\ResetGameButton.cs" />
     <Compile Include="Assets\Scripts\PlaneControl.cs" />
     <Compile Include="Assets\Scripts\QuizMode\IguanaQuizAnimation.cs" />
     <Compile Include="Assets\Scripts\QuizMode\MenuButtonClick.cs" />
@@ -257,6 +259,7 @@
     <None Include="Assets\ImportedAssets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
     <None Include="Assets\ImportedAssets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
     <None Include="Assets\ImportedAssets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+    <None Include="Assets\ImportedAssets\Laptop\StandardColorMask.shader" />
     <None Include="Assets\ImportedAssets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
     <None Include="Assets\ImportedAssets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
     <None Include="Assets\ImportedAssets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />

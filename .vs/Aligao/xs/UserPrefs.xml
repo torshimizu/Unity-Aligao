@@ -2,16 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Dialogue/DialogueManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="136" Column="22" />
-      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="11" Column="9" />
-      <File FileName="Assets/Scripts/ExploreMode/ExploreManager.cs" Line="69" Column="42" />
-      <File FileName="Assets/Scripts/PlaneControl.cs" Line="28" Column="52" />
-      <File FileName="Assets/Scripts/ExploreMode/AddItemOnClick.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="33" Column="21" />
-      <File FileName="Assets/Scripts/QuizMode/IguanaQuizAnimation.cs" Line="16" Column="6" />
-      <File FileName="Assets/Scripts/Dialogue/DialogueManager.cs" Line="16" Column="5" />
-      <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs" Line="75" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="128" Column="51" />
+      <File FileName="Assets/Scripts/ExploreMode/ExploreManager.cs" Line="36" Column="3" />
+      <File FileName="Assets/Scripts/GameControl/LoadSceneOnClick.cs" Line="17" Column="43" />
+      <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="146" Column="35" NotebookId="1" />
+      <File FileName="Assets/Scripts/Dialogue/DialogueManager.cs" Line="80" Column="12" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,6 +20,7 @@
                 <Node name="ExploreMode" expanded="True" />
                 <Node name="GameControl" expanded="True" />
                 <Node name="QuizMode" expanded="True" />
+                <Node name="SceneControl" expanded="True" />
               </Node>
             </Node>
           </Node>

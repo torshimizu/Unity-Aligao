@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
-    public Dialogue dialogue;
+    public Dialogue initialDialogue;
+    public Dialogue planeDialogue;
     public Text dialogueText;
     public Text continueButtonText;
 
@@ -21,8 +22,15 @@ public class DialogueManager : MonoBehaviour {
         {
             sentences = new Queue<string>();
             animator.SetTrigger("StartInstruction");
-            StartDialogue(dialogue);
+            StartDialogue(initialDialogue);
             GameControl.ToggleInitialExploreVisit();
+        }
+
+        if (GameControl.InFlightMode())
+        {
+            sentences = new Queue<string>();
+            animator.SetTrigger("StartInstruction");
+            StartDialogue(planeDialogue);
         }
      
     }
@@ -68,5 +76,10 @@ public class DialogueManager : MonoBehaviour {
     {
         Debug.Log("All sentences have been printed");
         animator.SetTrigger("EndInstruction");
+
+        if (GameControl.InFlightMode())
+        {
+            GameControl.StartPlaneSimulator();
+        }
     }
 }

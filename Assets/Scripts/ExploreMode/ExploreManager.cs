@@ -8,6 +8,8 @@ using System.Linq;
 
 public class ExploreManager : MonoBehaviour {
 
+    private static ExploreManager manager;
+
     [SerializeField]
     private GameObject playerObj;
 
@@ -26,18 +28,27 @@ public class ExploreManager : MonoBehaviour {
         // to GameControl.exploreTranslations position in memory
         exploreTranslations = GameControl.exploreTranslations;
 
+        Debug.Log("Flight mode: " + GameControl.InFlightMode());
+        Debug.Log("Prize status is " + GameControl.GetPrizeStatus());
+        if (manager == null)
+        {
+            manager = this;
+        }
+
 	}
 
 	private void OnEnable()
 	{
-        if (GameControl.GetPrizeStatus())
-        {
-            Debug.Log("The prize has been won");
-            playerObj.SetActive(false);
+        //if (GameControl.GetPrizeStatus())
+        //{
 
-            planeCamera.gameObject.SetActive(true);
-            planeObj.SetActive(true);
-        }
+        //    // might need to make this call after dialogue is played
+        //    Debug.Log("The prize has been won");
+        //    playerObj.SetActive(false);
+
+        //    planeCamera.gameObject.SetActive(true);
+        //    planeObj.SetActive(true);
+        //}
 	}
 
 	void Update () {
@@ -60,6 +71,15 @@ public class ExploreManager : MonoBehaviour {
         }
        
 	}
+
+    public static void ActivatePlaneSimulator()
+    {
+        Debug.Log("ActivatePlaneSimulator called");
+        ExploreManager.manager.playerObj.SetActive(false);
+
+        ExploreManager.manager.planeCamera.gameObject.SetActive(true);
+        ExploreManager.manager.planeObj.SetActive(true);
+    }
 
 
     public static void AddExploreItemsToList(string itemName, string translation)

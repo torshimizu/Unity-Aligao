@@ -33,7 +33,7 @@ public class PlaneControl : MonoBehaviour {
          //ensuring that you can't hit the ground
         if(terrainHeightWhereWeAre > transform.position.y)
             transform.position = new Vector3(transform.position.x,
-                                             terrainHeightWhereWeAre,
+                                             terrainHeightWhereWeAre + 10.0f,
                                              transform.position.z);
 
 	}
