@@ -87,6 +87,7 @@ public class QuizManager : MonoBehaviour {
             {
                 SetCurrentQuestion();
 
+                Debug.Log(currentObject.objectName);
                 // finding the inactive item
                 currentGameObject = propsHolder.Find(currentObject.objectName).gameObject;
 
@@ -222,6 +223,7 @@ public class QuizManager : MonoBehaviour {
     internal readonly string[,] propsInfo = new string[,]
     {
         { "Coconut_Tree", "tronkon niyok", "coconut = niyok", "" },
+        { "Coconut", "niyok", "none", "" },
         { "Banana_Tree", "tronkon chotda", "banana = chotda", "" },
         { "Latte_Stone", "latte'", "none", "" },
         { "Cutting_Board", "famikayan", "none", "" },
@@ -238,7 +240,10 @@ public class QuizManager : MonoBehaviour {
         { "Sink", "labadot", "none", "" },
         { "Doormat", "guafak", "none", "" },
         { "Ocean", "tasi", "none", "" },
-        { "Sand", "inai", "none", "" }
+        { "hibiskus", "rosa", "flower", "guma\' mela" },
+        { "rock", "acho\'", "none", "" },
+        { "Pan", "kålåhi", "none", "" },
+        { "Iguana", "hilitai", "none", "" }
         
     };
 

@@ -1,16 +1,34 @@
 ﻿<Properties StartupConfiguration="{89E4698F-C154-3938-BBD0-083165710B5A}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/QuizMode/IguanaQuizAnimation.cs">
     <Files>
-      <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="16" Column="66" />
+      <File FileName="Assets/Scripts/QuizMode/QuizManager.cs" Line="90" Column="51" />
+      <File FileName="Assets/Scripts/ExploreMode/PopUpClick.cs" Line="11" Column="9" />
       <File FileName="Assets/Scripts/ExploreMode/ExploreManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlaneControl.cs" Line="28" Column="52" />
       <File FileName="Assets/Scripts/ExploreMode/AddItemOnClick.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="43" Column="1" />
+      <File FileName="Assets/Scripts/ExploreMode/TerrainClick.cs" Line="18" Column="37" />
+      <File FileName="Assets/Scripts/QuizMode/IguanaQuizAnimation.cs" Line="7" Column="14" />
       <File FileName="Assets/Scripts/GameControl/GameControl.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs" Line="6" Column="52" NotebookId="1" />
+      <File FileName="Assets/ImportedAssets/JSLizards/Iguana/Scripts/IguanaUserController.cs" Line="75" Column="1" NotebookId="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Aligao" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="ExploreMode" expanded="True" />
+                <Node name="GameControl" expanded="True" />
+                <Node name="QuizMode" expanded="True">
+                  <Node name="IguanaQuizAnimation.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
