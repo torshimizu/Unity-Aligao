@@ -43,6 +43,7 @@ public class GameControl : MonoBehaviour {
         if (GUI.Button(new Rect((Screen.width - 120), 70, 100, 50), "Set prize status"))
         {
             isPrizeUnlocked = !isPrizeUnlocked;
+            Save();
             Debug.Log(isPrizeUnlocked);
         }
 
@@ -137,6 +138,7 @@ public class GameControl : MonoBehaviour {
     public static void StartPlaneSimulator()
     {
         ExploreManager.ActivatePlaneSimulator();
+        flightMode = false;
     }
 
     public static void FlightModeMenuClick()

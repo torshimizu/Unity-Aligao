@@ -11,7 +11,7 @@ public class FlightModeButton : MonoBehaviour {
     {
 
         //if(GameControl.seenExploreItems != null && GameControl.seenExploreItems.Count > 0)
-        if(!GameControl.GetPrizeStatus())
+        if(GameControl.GetPrizeStatus())
         {
             flightModeButton.SetActive(true);
         }
