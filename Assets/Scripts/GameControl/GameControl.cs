@@ -21,33 +21,33 @@ public class GameControl : MonoBehaviour {
 
     public Dialogue dialogue;
 
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect((Screen.width - 120), 10, 100, 50), "Clear File"))
-        {
-            try
-            {
-                File.Delete(filePath);
-            }
-            catch
-            {
-                Debug.Log("unable to delete file");
-                return;
-            }
-            Debug.Log("successfully cleared file");
-            initialExploreVisit = true;
-            seenExploreItems = null;
-            exploreTranslations = null;
-        }
+    //void OnGUI()
+    //{
+    //    if (GUI.Button(new Rect((Screen.width - 120), 10, 100, 50), "Clear File"))
+    //    {
+    //        try
+    //        {
+    //            File.Delete(filePath);
+    //        }
+    //        catch
+    //        {
+    //            Debug.Log("unable to delete file");
+    //            return;
+    //        }
+    //        Debug.Log("successfully cleared file");
+    //        initialExploreVisit = true;
+    //        seenExploreItems = null;
+    //        exploreTranslations = null;
+    //    }
 
-        if (GUI.Button(new Rect((Screen.width - 120), 70, 100, 50), "Set prize status"))
-        {
-            isPrizeUnlocked = !isPrizeUnlocked;
-            Save();
-            Debug.Log(isPrizeUnlocked);
-        }
+    //    if (GUI.Button(new Rect((Screen.width - 120), 70, 100, 50), "Set prize status"))
+    //    {
+    //        isPrizeUnlocked = !isPrizeUnlocked;
+    //        Save();
+    //        Debug.Log(isPrizeUnlocked);
+    //    }
 
-    }
+    //}
 
 
 	private void Awake()
